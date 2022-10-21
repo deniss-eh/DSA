@@ -1,1 +1,1 @@
-# Hacktoberfest Accepted :star
+# Hacktoberfest Accepted 
