@@ -76,12 +76,13 @@ class SegmentTree:
         return self.range_sum(range_left, min(range_right, mid), left(idx), left_node, mid) + \
                self.range_sum(max(range_left, mid + 1), range_right, right(idx), mid + 1, right_node)
 
-# n, m = read()
-# lst = list(read())
-# st = SegmentTree(lst)
-# for x in range(m):
-#     q = list(read())
-#     if q[0] == 1:
-#         st.update(q[1], q[2])
-#     else:
-#         print(st.range_sum(q[1], q[2] - 1))
+n, m = [5,5]
+lst = [5, 4, 2, 3, 5]
+query=[[2,0,3],[1,1,1],[2,0,3],[1,3,1],[2,0,5]]
+st = SegmentTree(lst)
+for x in range(m):
+    q = query[x]
+    if q[0] == 1:
+        st.update(q[1], q[2])
+    else:
+        print(st.range_sum(q[1], q[2] - 1))
